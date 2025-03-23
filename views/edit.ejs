@@ -1,0 +1,27 @@
+<h1>add data</h1>
+<form action="/edit" method="post">
+    <table border="1">
+        <input type="hidden" name="id" value="<%=updatestu.id%>">
+        <tr>
+            <td>name</td>
+            <td><input type="text" name="name" value="<%=updatestu.name%>"></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="text" name="email" value="<%=updatestu.email%>"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="text" name="password" value="<%=updatestu.password%>"></td>
+        </tr>
+        <tr>
+            <td>phone</td>
+            <td><input type="number" name="phone" value="<%=updatestu.phone%>"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">update</button></td>
+        </tr>
+    </table>
+</form>
+

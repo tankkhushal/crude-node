@@ -1,0 +1,48 @@
+<h1>add data</h1>
+<form action="/adddata" method="post">
+    <table border="1">
+        <tr>
+            <td>name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="text" name="password"></td>
+        </tr>
+        <tr>
+            <td>phone</td>
+            <td><input type="number" name="phone"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">submit</button></td>
+        </tr>
+    </table>
+</form>
+
+<table border="1">
+    <tr>
+        <td>name</td>
+        <td>email</td>
+        <td>password</td>
+        <td>phone</td>
+        <td>Action</td>
+    </tr>
+
+    <% studata.forEach((item) => { %>
+        <tr>
+            <td><%= item.name %></td>
+            <td><%= item.email %></td>
+            <td><%= item.password %></td>
+            <td><%= item.phone %></td>
+            <td>
+                <a href="/delete/?id=<%= item.id %>">delete</a> |
+                <a href="/update/<%= item.id %>">update</a>
+            </td>
+        </tr>
+    <% }) %>
+</table>
